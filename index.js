@@ -84,7 +84,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   answersContainer.innerHTML = `<div class="my-4">
   <i class="fa-solid fa-fan animate-spin text-2xl text-green-600"></i>
   <p class="text-xs animate-pulse">Please Wait, We are checking...</p>
-</div>`;
+  </div>`;
   let timeTaken = document.querySelector("#count");
   let totalMark = 0;
   let grade = {
@@ -110,7 +110,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("result"));
+  let storage = JSON.parse(localStorage.getItem("results"));
   if (storage) {
     localStorage.setItem(
       "results",
@@ -155,10 +155,12 @@ document.querySelector("#submit").addEventListener("click", () => {
   </div>
   
   <button onclick="location.reload();" class="bg-green-600 text-white w-full py-2 rounded mt-16">Restart</button>
+  
   ${
     storage
       ? `<div class="mt-5">
-      <h1 class="text-center">Previous Submissions <button class="text-blue-800 text-xs" onclick={localStorage.clear();location.reload()}>Clear History</button></h1>
+      <h1 class="text-center">Previous Submissions <button class="text-blue-800 text-xs" onclick="
+        localStorage.clear(); location.reload()">Clear History</button></h1>
     <div
     class="flex justify-between items-center border rounded p-2 my-2 shadow-sm font-medium">
     <div>Marks</div>
