@@ -187,3 +187,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+document.getElementById("btnBlog").addEventListener("click", () => {
+  window.location = "blog.html";
+});
