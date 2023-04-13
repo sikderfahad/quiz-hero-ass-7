@@ -41,16 +41,20 @@
 
     <header>
 
-        <h1 class="text-green-500 text-4xl font-semibold text-center w-fit mx-auto border-b-2 mt-10 pb-3">Welcome to
-            Hero
-            Blog
+        <h1 class="text-green-500 text-4xl font-semibold text-center w-fit mx-auto border-b-2 mt-10 pb-3">
+            <a title="Click here to jump Quiz !" href="index.html">
+                Welcome to
+                Hero
+                Blog
+            </a>
         </h1>
+
     </header>
 
 
     <main>
         <section class="w-4/6 mx-auto mt-16">
-            <div id="accordion-open" data-accordion="open">
+            <div id="accordion-open" class="shadow-2xl rounded-t-lg" data-accordion="open">
                 <h2 id="accordion-open-heading-1">
                     <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -161,7 +165,8 @@
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
-                            </svg>Is there a Figma file available?</span>
+                            </svg>What is the difference between local storage, session storage & cookies?
+                            ?</span>
                         <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -171,18 +176,64 @@
                     </button>
                 </h2>
                 <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                            conceptualized and designed
-                            using the
-                            Figma software so everything you see in the library has a design
-                            equivalent in our Figma
-                            file.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Figma
-                                design system</a> based
-                            on the
-                            utility classes from Tailwind CSS and components from Flowbite.</p>
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                        <h1 class="mb-6 text-lg text-gray-500 dark:text-gray-400">Local storage, session storage, and
+                            cookies are all ways to store data in the user's browser, but they have some
+                            differences in terms of lifespan, capacity, and usage.</h1>
+
+                        <ul class="acc-list list-disc p-5">
+                            <li class="text-rose-600 text-2xl">
+                                <h3 class="mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    Local Storage: Local storage allows you to store data in the user's browser with no
+                                    expiration date, unless explicitly
+                                    cleared by the user or the application. It provides a larger storage capacity
+                                    (typically 5-10MB)
+                                    <br>
+                                    This makes local storage a good choice for persisting data that needs to be
+                                    available across multiple sessions or for
+                                    caching data for faster access.
+                                </h3>
+                            </li>
+
+                            <li class="text-rose-600 text-2xl">
+                                <h3 class="mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    Session Storage: Session storage allows you to store data in the user's browser for
+                                    the duration of a session, which is
+                                    defined as the time period between when the user opens and closes a browser window.
+                                    Like local storage, session storage
+                                    provides a larger storage capacity (typically 5-10MB)
+                                    <br>
+                                    The data stored in session storage is only accessible within the same browser window
+                                    or tab, and is cleared
+                                    automatically when the window or tab is closed. This makes session storage a good
+                                    choice for storing data that only
+                                    needs to be available during the current session.
+                                </h3>
+                            </li>
+
+                            <li class="text-rose-600 text-2xl">
+                                <h3 class="mb-2 text-base text-gray-500 dark:text-gray-400">
+                                    Cookies: Cookies are small text files that are stored in the user's browser and are
+                                    sent to the server with every
+                                    request. Cookies have a limited storage capacity (typically 4KB) and can only store
+                                    simple text data.
+                                    <br><br>
+                                    They have an expiration date, which can be set by the server when the cookie is
+                                    created, and can be either a session
+                                    cookie (deleted when the browser is closed) or a persistent cookie (stored on the
+                                    user's computer for a longer period of
+                                    time).
+                                    <br>
+                                    Cookies are often used to store user preferences, session IDs, or other data that
+                                    needs to be transmitted between the
+                                    client and server.
+                                    <br><br>
+                                    However, cookies can be easily deleted by the user or rejected by the browser, which
+                                    makes them less reliable than local
+                                    or session storage for long-term data storage.
+                                </h3>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <h2 id="accordion-open-heading-3">
@@ -195,7 +246,8 @@
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
-                            </svg> What are the differences between Flowbite and Tailwind UI?</span>
+                            </svg> What is event loop? and how it is work?
+                        </span>
                         <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -205,34 +257,35 @@
                     </button>
                 </h2>
                 <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-                    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that
-                            the core components
-                            from
-                            Flowbite are open source under the MIT license, whereas Tailwind UI is a
-                            paid product.
-                            Another
-                            difference is that Flowbite relies on smaller and standalone components,
-                            whereas Tailwind UI
-                            offers
-                            sections of pages.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually
-                            recommend using both
-                            Flowbite,
-                            Flowbite Pro, and even Tailwind UI as there is no technical reason
-                            stopping you from using
-                            the best of
-                            two worlds.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these
-                            technologies:</p>
-                        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                            <li><a href="https://flowbite.com/pro/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite
-                                    Pro</a></li>
-                            <li><a href="https://tailwindui.com/" rel="nofollow"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind
-                                    UI</a></li>
-                        </ul>
+                    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                        <h3 class="mb-2 text-base text-gray-500 dark:text-gray-400">
+                            An event loop is a programming construct used in event-driven programming to handle
+                            asynchronous events and manage
+                            callbacks. It is a continuous loop that listens for events, such as user input, network
+                            requests, or timers, and
+                            executes the corresponding callback functions.
+                            <br><br>
+                            In more technical terms, the event loop is a mechanism that allows the program to process
+                            events and callbacks in a
+                            non-blocking way. It achieves this by continuously monitoring a queue of events and
+                            executing their corresponding
+                            callbacks as they become available.
+                            <br><br>
+                            When an event occurs, it is added to the queue, and the event loop checks the queue for any
+                            pending events. If there are
+                            any events, the event loop dequeues them and dispatches them to their respective callback
+                            functions.
+                            <br><br>
+                            The event loop is typically used in single-threaded environments, such as web browsers and
+                            Node.js, to handle
+                            asynchronous I/O operations without blocking the main thread. This allows the program to
+                            remain responsive to user input
+                            while performing long-running tasks in the background.
+                            <br><br>
+                            Overall, the event loop is a critical component of many modern programming frameworks and
+                            enables efficient handling of
+                            I/O operations and scalability of applications.
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -243,7 +296,7 @@
 
 
 
-
+    <br><br><br>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d30db6726a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
